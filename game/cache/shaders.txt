@@ -1,0 +1,13 @@
+renpy.ftl
+renpy.texture
+MyPigPrincess.fade_bar renpy.texture renpy.texture
+MyPigPrincess.animate_bell renpy.geometry renpy.texture
+renpy.solid
+renpy.dissolve renpy.dissolve
+renpy.geometry renpy.texture
+MyPigPrincess.animate_bell renpy.texture renpy.texture
+MyPigPrincess.fade_bar renpy.geometry renpy.texture
+renpy.alpha renpy.texture
+renpy.alpha renpy.geometry renpy.texture
+renpy.geometry renpy.solid
+renpy.dissolve renpy.geometry
