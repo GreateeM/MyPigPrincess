@@ -149,7 +149,7 @@ label start:
     billy "What's {i}your{/i} name?"
 label nameprotagonist:
 
-    $ Protagonist = renpy.input ("What is my name?{space=70}{space=0} {alpha=0.85} {size=-5}{i}Type it and press \"Enter\" when done!{/i}{/size}{/alpha}", allow=" abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ", length=15)
+    $ Protagonist = renpy.input ("What is my name?{space=70}{space=0} {alpha=0.85} {size=-5}{i}Type it and press \"Enter\" when done!{/i}{/size}{/alpha}", length=15)
     if Protagonist == "":
         "Hmm I'm pretty sure that's not my name. It's at least two letters long!"
         jump nameprotagonist
