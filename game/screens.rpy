@@ -419,23 +419,21 @@ screen main_menu_settings():
                         textbutton _("Window") action Preference("display", "window")
                         textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
-                null height 50
+                null height 0
 
                 vbox:
-                    yoffset 50
+                    yoffset 0
                     #style_prefix "check"
                     label _("Skip")
                     textbutton _("Unseen Text") action Preference("skip", "toggle")
                     textbutton _("After Choices") action Preference("after choices", "toggle")
 
-                    ## Removed the option to disable transitions. Furthermore,
-                    ## the transitions display setting is set to display all
-                    ## transitions in Variables.py just in case a player had
-                    ## already changed that preference.
-                    # textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
-
-                ## Additional vboxes of type "radio_pref" or "check_pref" can be
-                ## added here, to add additional creator-defined preferences.
+                vbox:
+                    yoffset 0
+                    #style_prefix "check"
+                    label _("Language")
+                    textbutton _("English") action Language(None)
+                    textbutton _("Russian") action Language("russian")
 
             null width 90
 
@@ -1007,7 +1005,7 @@ screen preferences():
 
         hbox:
 
-            spacing 170
+            spacing 40
 
             if renpy.variant("pc") or renpy.variant("web"):
 
@@ -1017,7 +1015,7 @@ screen preferences():
                     textbutton _("Window") action Preference("display", "window")
                     textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
-            null width 50
+            null width 0
 
             vbox:
                 #style_prefix "check"
@@ -1026,8 +1024,13 @@ screen preferences():
                 textbutton _("After Choices") action Preference("after choices", "toggle")
                 # textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
 
-            ## Additional vboxes of type "radio_pref" or "check_pref" can be
-            ## added here, to add additional creator-defined preferences.
+            null width 0
+
+            vbox:
+                #style_prefix "check"
+                label _("Language") text_style "gamesettings_text"
+                textbutton _("English") action Language(None)
+                textbutton _("Russian") action Language("russian")
 
         hbox:
 
